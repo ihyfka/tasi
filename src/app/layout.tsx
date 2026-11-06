@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/assets/styles/global.css";
 import { Providers } from "./providers";
 import { AppShell } from "./AppShell";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(""),
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Providers>
           <AppShell>{children}</AppShell>
         </Providers>
+        <Analytics/>
       </body>
     </html>
   );
